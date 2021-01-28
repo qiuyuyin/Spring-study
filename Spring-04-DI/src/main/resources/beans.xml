@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="address" class="com.yili.pojo.Address">
+
+</bean>
+<bean id="student" class="com.yili.pojo.Student" scope="prototype">
+    <property name="name" value="yili"/>
+    <property name="address" ref="address"/>
+    <property name="books">
+        <array value-type="java.lang.String">
+            <value>红楼</value>
+            <value>三国</value>
+            <value>水浒</value>
+            <value>西游</value>
+        </array>
+    </property>
+    <property name="hobbys">
+        <list value-type="java.lang.String">
+            <value>代码</value>
+            <value>听音乐</value>
+            <value>电影</value>
+        </list>
+    </property>
+    <property name="card">
+        <map>
+            <entry key="身份证" value="2000200200"/>
+            <entry key="卡" value="2000200200"/>
+            <entry key="多多" value="2000200200"/>
+        </map>
+    </property>
+    <property name="games">
+        <set>
+            <value>LOL</value>
+            <value>BOB</value>
+            <value>COC</value>
+        </set>
+    </property>
+    <property name="wife">
+        <null></null>
+    </property>
+    <property name="info">
+        <props>
+            <prop key="mysql">3306</prop>
+            <prop key="tomcat">8080</prop>
+            <prop key="localhost">23</prop>
+        </props>
+    </property>
+
+</bean>
+</beans>
